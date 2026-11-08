@@ -198,6 +198,18 @@ h2,
   border-bottom-color: var(--gold);
 }
 
+/* Homepage banner */
+
+.hero {
+  background: #6e1012;
+}
+
+.hero img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 /* Page */
 
 main {

@@ -15,7 +15,7 @@ Static HTML and CSS. There is no build step. Publish this repository from the ro
 | `missions.html` | Missions and Programs | Armory |
 | `inquire.html` | Inquire | Portcullis |
 
-Shared styles live in `css/styles.css`. The header mark on every page is the seal at `assets/seal.png`. Use that file as it is.
+Shared styles live in `css/styles.css`. The header mark on every page is the seal at `assets/seal.jpg`. The homepage banner is `assets/banner.jpg`. Use those files as they are.
 
 ## Local preview
 
