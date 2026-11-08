@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Inquire — Order of Avalon</title>
+  <meta name="description" content="The Order of Avalon is selective. The path is real. The standards are real. If you're ready, inquire.">
+  <meta name="theme-color" content="#fbf6ec">
+  <link rel="icon" href="assets/seal.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#content">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html">
+        <img class="seal" src="assets/seal.png" width="393" height="415" alt="Order of Avalon seal">
+        <span class="wordmark">
+          <span class="name">Order of Avalon</span>
+          <span class="latin">Ordo Avallonis</span>
+        </span>
+      </a>
+      <nav class="site-nav" aria-label="Primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="the-way.html">The Way</a></li>
+          <li><a href="the-order.html">The Order</a></li>
+          <li><a href="training.html">Training</a></li>
+          <li><a href="missions.html">Missions</a></li>
+          <li><a href="inquire.html" aria-current="page">Inquire</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main id="content" tabindex="-1">
+    <article class="page">
+      <p class="room">Portcullis</p>
+      <div class="sheet">
+        <h1>Inquire</h1>
+        <p>The Order is selective. The full roadmap is laid out after you apply.</p>
+        <p>The path is real. The standards are real. If you’re ready, inquire.</p>
+        <noscript>
+          <p class="quiet-note">If the form cannot be submitted from your browser, you will be able to reach the Order once a contact method is published.</p>
+        </noscript>
+        <!-- Set action to the form endpoint at deploy. Leave it unset until then. -->
+        <form id="inquire-form" class="inquire-form" method="post" aria-describedby="required-note">
+          <p class="quiet-note" id="required-note">Name, email, and a short message are required.</p>
+          <div class="field">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" autocomplete="email" required>
+          </div>
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="6" required></textarea>
+          </div>
+          <div class="form-actions">
+            <button class="button" type="submit">Submit inquiry</button>
+          </div>
+          <p id="form-status" class="form-status" role="status" hidden></p>
+        </form>
+      </div>
+    </article>
+  </main>
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p class="footer-mark">Order of Avalon</p>
+      <p class="footer-latin">Ordo Avallonis</p>
+      <p class="footer-inquire"><a href="inquire.html" aria-current="page">Inquire</a></p>
+    </div>
+  </footer>
+  <script>
+    (function () {
+      var form = document.getElementById("inquire-form");
+      if (!form || form.getAttribute("action")) return;
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+        var status = document.getElementById("form-status");
+        if (!status) return;
+        status.hidden = false;
+        status.textContent = "Nothing was sent. The form is not connected, so your inquiry did not reach the Order.";
+      });
+    }());
+  </script>
+</body>
+</html>
