@@ -1,20 +1,20 @@
-/* Order of Avalon — public site
-   Sunlit parchment, iron ink, a thread of gold.
-   Seal red is an accent, used sparingly. */
+/* Order of Avalon — dark theme preview
+   Dawn after a long night: warm near-black, parchment ink, a thread of gold.
+   Palette cued from churchofchivalry.com. Seal red is reserved for filled buttons. */
 
 :root {
-  --parchment: #f6f0e4;
-  --parchment-top: #fbf6ec;
-  --parchment-deep: #efe4d2;
-  --ink: #2c261f;
-  --ink-soft: #5c5346;
+  --parchment: #12100e;
+  --parchment-top: #0c0b09;
+  --parchment-deep: #1a1210;
+  --ink: #e7e0d2;
+  --ink-soft: #c4b49a;
   --seal: #9e1a15;
   --seal-deep: #7c1410;
-  --gold: #a6843d;
-  --gold-deep: #6e5424;
-  --line: #e0d4c0;
-  --field: #fbf8f2;
-  --field-line: #cfc3ad;
+  --gold: #c5a035;
+  --gold-deep: #d4b45a;
+  --line: #3a3228;
+  --field: #1c1916;
+  --field-line: #6a5a3c;
   --measure: 38rem;
   --page: 56rem;
 }
@@ -26,7 +26,7 @@
 }
 
 html {
-  color-scheme: light;
+  color-scheme: dark;
   font-size: 100%;
 }
 
@@ -45,8 +45,8 @@ body {
 }
 
 ::selection {
-  background: #e7d3a1;
-  color: var(--ink);
+  background: var(--gold);
+  color: var(--parchment);
 }
 
 img {
@@ -59,7 +59,7 @@ a {
 }
 
 :focus-visible {
-  outline: 2px solid var(--seal);
+  outline: 2px solid var(--gold);
   outline-offset: 3px;
 }
 
@@ -69,7 +69,7 @@ a {
   top: -4rem;
   z-index: 20;
   padding: 0.5rem 0.75rem;
-  background: var(--ink);
+  background: var(--gold);
   color: var(--parchment-top);
   text-decoration: none;
 }
@@ -117,7 +117,8 @@ a {
 }
 
 .seal {
-  height: 3.75rem;
+  height: 4.5rem;
+  border-radius: 50%;
   width: auto;
   flex: none;
   display: block;
@@ -151,7 +152,7 @@ h2,
 }
 
 .brand:hover .name {
-  color: var(--seal);
+  color: var(--gold);
 }
 
 .latin,
@@ -190,24 +191,12 @@ h2,
 }
 
 .site-nav a:hover {
-  color: var(--seal);
+  color: var(--gold);
 }
 
 .site-nav a[aria-current="page"] {
-  color: var(--seal);
+  color: var(--gold);
   border-bottom-color: var(--gold);
-}
-
-/* Homepage banner */
-
-.hero {
-  background: #6e1012;
-}
-
-.hero img {
-  display: block;
-  width: 100%;
-  height: auto;
 }
 
 /* Page */
@@ -289,17 +278,17 @@ p {
 }
 
 .sheet a:not(.button) {
-  color: var(--seal);
+  color: var(--gold);
   text-decoration-thickness: 1px;
   text-underline-offset: 0.18em;
 }
 
 .sheet a:not(.button):hover {
-  color: var(--seal-deep);
+  color: var(--gold-deep);
 }
 
 .sheet a:not(.button):visited {
-  color: var(--seal);
+  color: var(--gold);
 }
 
 .marks {
@@ -350,7 +339,7 @@ p {
   display: inline-block;
   margin: 0;
   padding: 0.85rem 1.35rem;
-  border: 1px solid var(--gold-deep);
+  border: 1px solid var(--gold);
   background: transparent;
   color: var(--ink);
   font-weight: 500;
@@ -365,7 +354,7 @@ p {
 .button:hover {
   background: var(--seal);
   border-color: var(--seal);
-  color: var(--parchment-top);
+  color: var(--ink);
 }
 
 .button:active {
@@ -416,9 +405,9 @@ textarea {
 
 input:focus,
 textarea:focus {
-  outline: 2px solid var(--gold-deep);
+  outline: 2px solid var(--gold);
   outline-offset: 1px;
-  border-color: var(--gold-deep);
+  border-color: var(--gold);
 }
 
 input:user-invalid,
@@ -483,7 +472,7 @@ textarea:user-invalid {
 }
 
 .footer-inquire a:hover {
-  color: var(--seal);
+  color: var(--gold);
 }
 
 @media (min-width: 720px) {
@@ -566,4 +555,18 @@ textarea:user-invalid {
   a {
     text-decoration: underline;
   }
+}
+
+.hero-banner {
+  width: 100%;
+  background: #5a0b0b;
+  border-bottom: 1px solid rgba(197, 160, 53, 0.45);
+}
+.hero-banner img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 520px;
+  object-fit: cover;
+  object-position: center;
 }
